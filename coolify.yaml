@@ -16,7 +16,7 @@ services:
       NEO4J_USERNAME: "neo4j"
       NEO4J_PASSWORD: "Dreamective@123"
     domains:
-      - name: api.graphiti.example.com
+      - name: api.graphiti.thesouls.store
         enable_https: true
 
   graphiti-ui:
@@ -32,9 +32,9 @@ services:
       command: npm run build
       output: build
     env:
-      VITE_GRAPHITI_API_URL: "https://api.graphiti.example.com"
+      VITE_GRAPHITI_API_URL: "https://api.graphiti.thesouls.store"
     domains:
-      - name: graphiti.example.com
+      - name: graphiti.thesouls.store
         enable_https: true
 
   graphiti-neo4j:
@@ -43,7 +43,7 @@ services:
     image: neo4j:5
     port: 7687
     env:
-      NEO4J_AUTH: "neo4j/your_strong_password"
+      NEO4J_AUTH: "neo4j/Dreamective@123"
     volumes:
       - /data
     domains: []
